@@ -1,0 +1,8 @@
+*.bin
+*.cache
+
+src/blazor-test/.vs
+src/blazor-test/blazor-test/*setting*
+src/blazor-test/blazor-test/obj
+src/blazor-test/blazor-test/Properties
+src/blazor-test/blazor-test/wwwroot
