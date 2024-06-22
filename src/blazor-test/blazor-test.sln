@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazor-test", "blazor-test\blazor-test.csproj", "{87C3EF42-C34F-48AA-8E06-8B5A5988B020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blazor-test", "blazor-test\blazor-test.csproj", "{87C3EF42-C34F-48AA-8E06-8B5A5988B020}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

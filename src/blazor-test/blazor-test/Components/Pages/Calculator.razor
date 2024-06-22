@@ -1,0 +1,81 @@
+﻿@page "/calculator"
+@rendermode InteractiveServer
+
+<PageTitle>Calculator</PageTitle>
+
+<h1>Calculator</h1>
+
+<!-- Horrible but just a poc -->
+<div>
+	@for (int i = 1; i <= 10; i++)
+	{
+		int number = i;
+		<button class="btn" @onclick="() => SetFirstNumber(number)">@number</button>
+	}
+</div>
+
+<div>
+	<button class="btn" @onclick="() => SetOp(0)">+</button>
+	<button class="btn" @onclick="() => SetOp(1)">-</button>
+	<button class="btn" @onclick="() => SetOp(2)">*</button>
+	<button class="btn" @onclick="() => SetOp(3)">/</button>
+</div>
+
+<div id="second_number">
+	@for (int i = 1; i <= 10; i++)
+	{
+		int number = i;
+		<button class="btn" @onclick="() => SetSecondNumber(number)">@number</button>
+	}
+</div>
+
+<div>
+	<button class="btn" @onclick="Calculate">Calculate</button>
+</div>
+
+<p role="status">Result: @result</p>
+
+@code {
+	private int firstNumber = 0;
+	private int secondNumber = 0;
+	private int op = 0;
+	private int result = 0;
+
+	private void SetFirstNumber(int number)
+	{
+		firstNumber = number;
+	}
+
+	private void SetSecondNumber(int number)
+	{
+		secondNumber = number;
+	}
+
+	private void SetOp(int operation)
+	{
+		op = operation;
+	}
+
+	private void Calculate()
+	{
+		switch (op)
+		{
+			default:
+			case 0:
+				result = firstNumber + secondNumber;
+				break;
+
+			case 1:
+				result = firstNumber - secondNumber;
+				break;
+
+			case 2:
+				result = firstNumber * secondNumber;
+				break;
+
+			case 3:
+				result = firstNumber / secondNumber;
+				break;
+		}	
+	}
+}
