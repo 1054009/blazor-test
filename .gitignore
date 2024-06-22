@@ -1,8 +1,12 @@
 *.bin
 *.cache
+*.dll
+*.exe
+*.pdb
 
 src/blazor-test/.vs
 src/blazor-test/blazor-test/*setting*
+src/blazor-test/blazor-test/bin
 src/blazor-test/blazor-test/obj
 src/blazor-test/blazor-test/Properties
 src/blazor-test/blazor-test/wwwroot
